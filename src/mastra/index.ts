@@ -3,6 +3,7 @@ import { Mastra } from '@mastra/core/mastra';
 import { LibSQLStore } from '@mastra/libsql';
 import { weatherAgent } from './agents/weather-agent';
 import { weatherTool } from './tools/weather-tool';
+import { currencyTool } from './tools/currency-tool';
 import { MastraEditor } from "@mastra/editor";
 
 export const mastra = new Mastra({
@@ -12,5 +13,5 @@ export const mastra = new Mastra({
     url: 'file:./mastra.db',
   }),
   editor: new MastraEditor({ source: 'code' }),
-  tools: { 'weather-tool': weatherTool },
+  tools: { 'weather-tool': weatherTool, 'currency-tool': currencyTool },
 });
